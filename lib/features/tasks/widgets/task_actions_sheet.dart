@@ -121,18 +121,19 @@ class TaskActionsSheet extends StatelessWidget {
             },
           ),
 
-          const Divider(height: 1, color: AppColors.borderDark),
-
-          _buildActionTile(
-            context,
-            icon: Icons.delete,
-            title: 'Delete Task',
-            color: AppColors.error,
-            onTap: () {
-              Navigator.pop(context);
-              _showDeleteConfirmation(context);
-            },
-          ),
+          // Currently, user can only delete the task using "Clear All" option.
+          // const Divider(height: 1, color: AppColors.borderDark),
+          //
+          // _buildActionTile(
+          //   context,
+          //   icon: Icons.delete,
+          //   title: 'Delete Task',
+          //   color: AppColors.error,
+          //   onTap: () {
+          //     Navigator.pop(context);
+          //     _showDeleteConfirmation(context);
+          //   },
+          // ),
         ],
       ),
     );
