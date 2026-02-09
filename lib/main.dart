@@ -17,7 +17,7 @@ import 'features/splash/splash_screen.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Set system UI overlay style
+  // Set system UI overlay style, It is for status bar of the mobile device.
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
@@ -37,7 +37,10 @@ class MyApp extends StatelessWidget {
       title: 'Task Manager Pro',
       debugShowCheckedModeBanner: false,
       theme: _buildTheme(),
+      // System settings ke hisaab se apne aap switch karega, But we have to create Ligth and Dark theme separately, currently we only have dark theme.
+      // themeMode: ThemeMode.system,
       home: const AppInitializer(),
+      // Firebase Integration at every cost. For data storage, analytics, testing and many more functions.
     );
   }
 
